@@ -21,3 +21,9 @@ in version *Zombies v5 Revision 13.1.2*. Since this mod saves the players stats 
 ```stats/players/``` folder, make sure you create this folder based in games root directory
 that you mount to the containers ```/opt/codmp/``` location. Stats saving and loading will 
 not work, if the ```/opt/codmp/stats/players/``` folder in the container does not exist.
+
+## Quickstart
+```
+user@host: docker build -t tag:name .
+user@host: docker run --name codmp -v /home/user/codmp:/opt/codmp -p 28960:28960/tcp -p 28960:28960/udp -p 20500:20500/udp -p 20510:20510/udp tag:name
+```
